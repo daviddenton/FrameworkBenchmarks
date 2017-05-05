@@ -1,0 +1,41 @@
+buildscript {
+    ext.kotlin_version = "1.1.2"
+    ext.reekwest_version = "0.8.0"
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+apply plugin: "kotlin"
+apply plugin: 'gradle-one-jar'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.reekwest:reekwest:$reekwest_version"
+    compile "org.reekwest:reekwest-contract:$reekwest_version"
+    compile "org.reekwest:reekwest-formats-jackson:$reekwest_version"
+    compile "org.reekwest:reekwest-server-jetty:$reekwest_version"
+    compile "org.reekwest:reekwest-server-netty:$reekwest_version"
+}
+
+task jetty(type: OneJar) {
+    mainClass = 'KaisekiJettyServerKt'
+}
+
+task netty(type: OneJar) {
+    mainClass = 'KaisekiNettyServerKt'
+}

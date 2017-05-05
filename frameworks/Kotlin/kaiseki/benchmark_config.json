@@ -1,0 +1,55 @@
+{
+  "framework": "kaiseki",
+  "tests": [
+    {
+      "default": {
+        "orm": "Raw",
+        "database_os": "Linux",
+        "setup_file": "setup_jetty",
+        "db_url": "/db",
+        "fortune_url": "/fortunes",
+        "json_url": "/json",
+        "query_url": "/queries?queries=",
+        "plaintext_url": "/plaintext",
+        "update_url": "/updates?queries=",
+        "port": 9000,
+        "approach": "Realistic",
+        "classification": "Micro",
+        "database": "MySQL",
+        "framework": "kaiseki",
+        "language": "Kotlin",
+        "platform": "Netty",
+        "webserver": "None",
+        "os": "Linux",
+        "display_name": "kaiseki-jetty",
+        "notes": "",
+        "versus": "jetty"
+      }
+    },
+    {
+      "default": {
+        "orm": "Raw",
+        "database_os": "Linux",
+        "setup_file": "setup_netty",
+        "db_url": "/db",
+        "fortune_url": "/fortunes",
+        "json_url": "/json",
+        "query_url": "/queries?queries=",
+        "plaintext_url": "/plaintext",
+        "update_url": "/updates?queries=",
+        "port": 9000,
+        "approach": "Realistic",
+        "classification": "Micro",
+        "database": "MySQL",
+        "framework": "kaiseki",
+        "language": "Kotlin",
+        "platform": "Netty",
+        "webserver": "None",
+        "os": "Linux",
+        "display_name": "kaiseki-netty",
+        "notes": "",
+        "versus": "netty"
+      }
+    }
+  ]
+}
